@@ -2,6 +2,7 @@
 const models = require("../models/models");
 
 exports.getAllMembersSummary = async (req, res, next) => {
+  console.log("IN CONTROLLER OK");
   const results = await models.fetchSummary().catch(console.dir);
   res.send({ status: 200, results });
 };
