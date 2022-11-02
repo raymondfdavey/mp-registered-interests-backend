@@ -4,6 +4,8 @@
         "titleBar.activeBackground": "#c85081",
         "titleBar.activeForeground": "#e7e7e7",
         "titleBar.inactiveBackground": "#c8508199",
-        "titleBar.inactiveForeground": "#e7e7e799"
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#d4779d"
     }
 }
