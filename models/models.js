@@ -1,7 +1,7 @@
 // const client = require("../connection");
 // require("dotenv").config();
 var ObjectId = require("mongodb").ObjectId;
-const connection = require("../connection");
+const connection = require("../src/connection");
 exports.fetchSummary = async () => {
   console.log("IN MODELS OK");
   try {
