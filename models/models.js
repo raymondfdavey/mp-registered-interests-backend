@@ -1,6 +1,8 @@
 // const client = require("../connection");
 var ObjectId = require("mongodb").ObjectId;
+
 const connection = require("../connection");
+
 exports.fetchSummary = async () => {
   try {
     const cursor = await connection.db("registered_interests").collection("members_production").find();

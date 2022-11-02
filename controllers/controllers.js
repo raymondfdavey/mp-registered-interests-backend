@@ -1,4 +1,4 @@
-const models = require("../models/models.js");
+const models = require("../models/models");
 
 exports.getAllMembersSummary = async (req, res, next) => {
   const results = await models.fetchSummary().catch(console.dir);
