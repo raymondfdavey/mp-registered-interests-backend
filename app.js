@@ -4,7 +4,7 @@ const app = express();
 // const cors = require("cors");
 const models = require("./models/models.js");
 const controllers = require("./controllers/controllers");
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 
 app.route("/").get((req, res, next) => res.send("HELLO WORLD base - GETTING"));
