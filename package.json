@@ -12,13 +12,15 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.17.1",
-    "mongoose": "^5.11.15",
+    "mongoose": "^6.x",
     "nodemon": "^2.0.20",
     "validator": "^13.5.2"
   },
   "engines": {
-    "node": "14.x"
+    "node": "16.x",
+    "npm": "8.x"
   },
   "description": ""
 }
