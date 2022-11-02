@@ -1,9 +1,9 @@
+// require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
 const models = require("./models/models.js");
 const controllers = require("./controllers/controllers");
-require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 
