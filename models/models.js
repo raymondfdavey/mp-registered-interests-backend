@@ -1,7 +1,7 @@
 // const client = require("../connection");
 // require("dotenv").config();
 var ObjectId = require("mongodb").ObjectId;
-const connection = require("../connection");
+const connection = require("../src/connection");
 exports.fetchSummary = async () => {
   try {
     const cursor = await connection.db("registered_interests").collection("members_production").find();
