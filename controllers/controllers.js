@@ -1,3 +1,4 @@
+require("dotenv").config();
 const models = require("../models/models");
 
 exports.getAllMembersSummary = async (req, res, next) => {
