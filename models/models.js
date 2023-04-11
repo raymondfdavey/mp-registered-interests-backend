@@ -26,7 +26,7 @@ exports.fetchMembersInterestsById = async (memberId) => {
     const cursor = await connection
       .db("registered_interests")
       .collection("interests_production")
-      .find({ memberId: ObjectId(memberId) });
+      .find({ "memberId": new ObjectId(memberId) });
     const results = await cursor.toArray();
     return results;
   } catch (e) {
@@ -40,7 +40,7 @@ exports.fetchMembersInterestsByIdAndDate = async (memberId, date) => {
       .db("registered_interests")
       .collection("interests_production")
       .find({
-        memberId: ObjectId(memberId),
+        memberId: new ObjectId(memberId),
         registerDate: {
           $gte: new Date(`${date}-01-01T00:00:00.000Z`),
           $lt: new Date(`${(parseInt(date) + 1).toString()}-01-01T00:00:00.000Z`),
@@ -58,7 +58,7 @@ exports.fetchMembersInterestsByIdAndDateAndCategory = async (memberId, date, cat
     .db("registered_interests")
     .collection("interests_production")
     .find({
-      memberId: ObjectId(memberId),
+      memberId: new ObjectId(memberId),
       registerDate: {
         $gte: new Date(`${date}-01-01T00:00:00.000Z`),
         $lt: new Date(`${(parseInt(date) + 1).toString()}-01-01T00:00:00.000Z`),
@@ -77,7 +77,7 @@ exports.fetchMembersInterestsByIdAndCategory = async (memberId, category) => {
     .db("registered_interests")
     .collection("interests_production")
     .find({
-      memberId: ObjectId(memberId),
+      memberId: new ObjectId(memberId),
       category: category,
     });
   const results = await cursor.toArray();
@@ -90,7 +90,7 @@ exports.patchClick = async (memberId) => {
     const cursor = await connection
       .db("registered_interests")
       .collection("members_production")
-      .updateOne({ _id: ObjectId(memberId) }, { $inc: { numberOfClicks: 1 } }, false, true);
+      .updateOne({ _id: new ObjectId(memberId) }, { $inc: { numberOfClicks: 1 } }, false, true);
 
     const results = await cursor;
     return results;
